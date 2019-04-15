@@ -9,6 +9,7 @@ import spring.profile.controllers.SpringProfilesController;
 public class DependencyInjectionApplication {
 
     public static void main(String[] args) {
+        // ApplicationContext is the container
         ApplicationContext ctx = SpringApplication.run(DependencyInjectionApplication.class, args);
         SpringProfilesController controller = (SpringProfilesController) ctx.getBean("dependencyInjectionApplication");
         controller.setupDatasourceConfig();
